@@ -407,6 +407,8 @@ your sequence headers include pipes (i.e.: | ) they adhere to '
   $blastdb_with_suffix = $blastdb_with_path . $file_suffix;
   if (is_readable($blastdb_with_suffix)) {
     global $user;
+    //$output_dir  = variable_get('file_public_path', conf_path() . '/files') . DIRECTORY_SEPARATOR . 'tripal' . DIRECTORY_SEPARATOR . 'tripal_blast';
+    //$output_filestub = $output_dir . DIRECTORY_SEPARATOR . date('YMd_His');
     $output_filestub = date('YMd_His');
     $job_args = array(
       'program' => $blast_program,

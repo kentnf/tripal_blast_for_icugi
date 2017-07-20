@@ -143,11 +143,14 @@ function get_blast_database_options($type) {
  */
 function run_BLAST_tripal_job($program, $query, $database, $output_filestub, $options, $job_id = NULL) {
 
- $output_file = file_directory_temp() .  DIRECTORY_SEPARATOR . $output_filestub . '.blast.asn';
- $output_file_xml = variable_get('file_public_path', conf_path() . '/files') . DIRECTORY_SEPARATOR . $output_filestub . '.blast.xml';
- $output_file_tsv = variable_get('file_public_path', conf_path() . '/files') . DIRECTORY_SEPARATOR . $output_filestub . '.blast.tsv';
- $output_file_html = variable_get('file_public_path', conf_path() . '/files') . DIRECTORY_SEPARATOR . $output_filestub . '.blast.html';
-
+  $output_file = file_directory_temp() .  DIRECTORY_SEPARATOR . $output_filestub . '.blast.asn';
+  //$output_file_xml  = $output_filestub . '.blast.xml';
+  //$output_file_tsv  = $output_filestub . '.blast.tsv';
+  //$output_file_html = $output_filestub . '.blast.html';
+  $output_dir = variable_get('file_public_path', conf_path() . '/files');
+  $output_file_xml  = $output_dir . DIRECTORY_SEPARATOR . $output_filestub . '.blast.xml';
+  $output_file_tsv  = $output_dir . DIRECTORY_SEPARATOR . $output_filestub . '.blast.tsv';
+  $output_file_html = $output_dir . DIRECTORY_SEPARATOR . $output_filestub . '.blast.html';
 
   print "\nExecuting $program\n\n";
   print "Query: $query\n";
