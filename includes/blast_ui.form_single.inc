@@ -453,7 +453,7 @@ function blast_ui_icugi_advanced_options_form(&$form, $form_state) {
   // '#collapsible' => FALSE,
   //);
 
-  $form['ALG']['num_descriptions'] = array(
+  $form['ALG']['max_target_seqs'] = array(
     '#type' => 'textfield',
     '#title' => t('Num Descriptions:'),
     '#default_value' => 5,
@@ -543,7 +543,7 @@ function blast_ui_icugi_advanced_options_form_submit($form, $form_state) {
 
   return array(
     'evalue' => $form_state['values']['eVal'],
-    'num_descriptions' => $form_state['values']['num_descriptions'],
+    //'max_target_seqs' => $form_state['values']['max_target_seqs'],
     'num_alignments' => $form_state['values']['num_alignments'],
     //'word_size' => $wordSize,
   );
