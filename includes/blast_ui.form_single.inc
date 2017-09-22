@@ -56,8 +56,8 @@ function blast_ui_all_in_one_form($form, $form_state) {
 
   $form['DB'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Choose Search Set'),
-    '#description' => t('Choose from one of the BLAST databases listed below.'),
+    '#title' => t('Choose a search set'),
+    '#description' => t('Choose one of the BLAST databases listed below.'),
     '#collapsible' => FALSE,
     '#collapsed' => FALSE,
   );
@@ -118,8 +118,8 @@ function blast_ui_all_in_one_form($form, $form_state) {
 
   $form['query'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Enter Query Sequence'),
-    '#description' => t('Enter one or more queries in the top text box or use '
+    '#title' => t('Enter (a) query sequence(s)'),
+    '#description' => t('Enter one or more queries in the text box or use '
       . 'the browse button to upload a file from your local disk. The file may '
       . 'contain a single sequence or a list of sequences. In both cases, the '
       . 'data must be in <a href="@formaturl" target="_blank">FASTA format</a>.',

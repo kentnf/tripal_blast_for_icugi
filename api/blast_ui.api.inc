@@ -106,6 +106,9 @@ function get_blast_database_options($type) {
           elseif ( preg_match("/Cucurbit/i", $node->db_name) ) {
             $options_all['Genomes,CDS'][$node->nid] = $node->db_name;
           }
+          elseif ( preg_match("/Bottle/i", $node->db_name) ) {
+            $options_all['Genomes,CDS'][$node->nid] = $node->db_name;
+          }
         }
       }
     }
