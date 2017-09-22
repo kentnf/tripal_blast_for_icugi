@@ -216,8 +216,6 @@ function run_BLAST_tripal_job($program, $query, $database, $output_filestub, $op
   print "\tXML\n";
   system("$blast_formatter_command -archive $output_file -outfmt 5 -out $output_file_xml");
 
-  print "$blast_formatter_command -archive $output_file -outfmt 5 -out $output_file_xml";
-
   if(!file_exists($output_file_xml)) {
     tripal_report_error(
       'blast_ui',
