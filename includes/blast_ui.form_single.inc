@@ -57,7 +57,7 @@ function blast_ui_all_in_one_form($form, $form_state) {
   $form['DB'] = array(
     '#type' => 'fieldset',
     '#title' => t('Choose a search set'),
-    '#description' => t('Choose one of the BLAST databases listed below.'),
+    //'#description' => t('Choose one of the BLAST databases listed below.'),
     '#collapsible' => FALSE,
     '#collapsed' => FALSE,
   );
@@ -90,8 +90,8 @@ function blast_ui_all_in_one_form($form, $form_state) {
       '#description' => t('The file should be a plain-text FASTA
   (.fasta, .fna, .fa) file. In other words, it cannot have formatting as is the
   case with MS Word (.doc, .docx) or Rich Text Format (.rtf). It cannot be greater
-  than %max_size in size. <strong>Don\'t forget to press the Upload button before
-  attempting to submit your BLAST.</strong>',
+  than %max_size in size. <strong>Do not forget to press the Upload button before
+  submitting your BLAST search.</strong>',
         array(
           '%max_size' => round(file_upload_max_size() / 1024 / 1024,1) . 'MB'
         )
@@ -121,7 +121,7 @@ function blast_ui_all_in_one_form($form, $form_state) {
     '#title' => t('Enter (a) query sequence(s)'),
     '#description' => t('Enter one or more queries in the text box or use '
       . 'the browse button to upload a file from your local disk. The file may '
-      . 'contain a single sequence or a list of sequences. In both cases, the '
+      . 'contain a single sequence or a list of sequences. The '
       . 'data must be in <a href="@formaturl" target="_blank">FASTA format</a>.',
         array(
           '@formaturl' => 'http://www.ncbi.nlm.nih.gov/BLAST/blastcgihelp.shtml'
@@ -162,8 +162,8 @@ function blast_ui_all_in_one_form($form, $form_state) {
     '#description' => t('The file should be a plain-text FASTA
 (.fasta, .fna, .fa) file. In other words, it cannot have formatting as is the
 case with MS Word (.doc, .docx) or Rich Text Format (.rtf). It cannot be greater
-than %max_size in size. <strong>Don\'t forget to press the Upload button before
-attempting to submit your BLAST.</strong>',
+than %max_size in size. <strong>Do not forget to press the Upload button before
+ submitting your BLAST search.</strong>',
       array(
         '%max_size' => round(file_upload_max_size() / 1024 / 1024,1) . 'MB'
       )

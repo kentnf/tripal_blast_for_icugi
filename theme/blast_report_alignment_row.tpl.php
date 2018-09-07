@@ -19,11 +19,11 @@
   <div class="alignment-metrics">
     <span class="identity">
       Identity=&nbsp;
-      <?php print $hsp['Hsp_identity']; ?>/<?php print $hsp['Hsp_align-len']; ?> (<?php print $hsp['Hsp_identity']/$hsp['Hsp_align-len']*100;?>%)
+      <?php print $hsp['Hsp_identity']; ?>/<?php print $hsp['Hsp_align-len']; ?> (<?php print round($hsp['Hsp_identity']/$hsp['Hsp_align-len']*100,2);?>%)
     </span>,&nbsp;
     <span class="positive">
       Positive=&nbsp;
-      <?php print $hsp['Hsp_positive']; ?>/<?php print $hsp['Hsp_align-len']; ?> (<?php print $hsp['Hsp_positive']/$hsp['Hsp_align-len']*100;?>%)
+      <?php print $hsp['Hsp_positive']; ?>/<?php print $hsp['Hsp_align-len']; ?> (<?php print round($hsp['Hsp_positive']/$hsp['Hsp_align-len']*100,2);?>%)
     </span>
     <span class="coord-summary">
       Query Matches <?php print $hsp['Hsp_query-from'] . ' to ' . $hsp['Hsp_query-to']; ?>
